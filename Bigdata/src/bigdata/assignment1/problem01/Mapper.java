@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bigdata.problem01;
+package bigdata.assignment1.problem01;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -23,19 +23,19 @@ import java.util.stream.Collectors;
  *
  * @author Tesfay
  */
-public class Solution01 {
+public class Mapper {
 
     public static List<String> fileToList(File file) {
         List<String> rawWords = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line = br.readLine();
             while (line != null) {
-                List<String> s = Arrays.asList(line.split("[\\-|\\s+|\\,\\s]")).stream().filter(x -> !x.contains(" ")).collect(Collectors.toList());
+                List<String> s = Arrays.asList(line.split("[\\-|\\s+|\\,\\s]")).stream().filter(x -> !x.contains("\\s*")).collect(Collectors.toList());
                 rawWords.addAll(s);
                 line = br.readLine();
             }
         } catch (IOException ex) {
-            Logger.getLogger(Solution01.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Mapper.class.getName()).log(Level.SEVERE, null, ex);
         }
         return rawWords;
     }

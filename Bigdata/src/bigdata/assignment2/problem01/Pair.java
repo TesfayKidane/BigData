@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bigdata.problem01;
+package bigdata.assignment2.problem01;
 
 /**
  *

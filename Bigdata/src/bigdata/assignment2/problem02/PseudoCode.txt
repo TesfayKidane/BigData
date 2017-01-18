@@ -1,0 +1,12 @@
+Map
+1. Map every integer in the list to zero except 4 and 3;
+2. return new list
+
+Fold
+Initial value of sum = 0;
+1. Calculate sum of list of integers
+
+2. If sum % 2 == 0 or  ( sum - 3 >=0 and sum - 3 % 2 == 0  then
+    return true;
+   else 
+    return false
